@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function cad_render_theme() {
+    return [
+        'cad_render_block' => [
+            'variables' => [],
+        ],
+    ];
+}

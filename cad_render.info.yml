@@ -1,0 +1,5 @@
+name: 'CAD Render'
+type: module
+description: 'Render a CAD model in a block on a page.'
+core_version_requirement: ^11
+package: 'CAD Render'

@@ -1,0 +1,53 @@
+block.settings.cad_render_block:
+  type: block_settings
+  label: 'CAD Render block settings'
+  mapping:
+    cad_render_file:
+      type: sequence
+      label: 'CAD model to display in this block'
+      sequence:
+        type: integer
+    animation:
+      type: string
+      label: 'Animation'
+      default: 'none'
+    camera_type:
+      type: string
+      label: 'Camera Type'
+      default: 'perspective'
+    camera_zoom:
+      type: float
+      label: 'Zoom'
+      default: 1
+    width:
+      type: string
+      label: 'Width'
+      default: ''
+    height:
+      type: string
+      label: 'Height'
+      default: ''
+    background_color:
+      type: string
+      label: 'Background Color'
+      default: ''
+    material:
+      type: string
+      label: 'Material'
+      default: 'default'
+    solid_color:
+      type: string
+      label: 'Solid Color'
+      default: '#ffffff'
+    transparency:
+      type: boolean
+      label: 'Enable Transparency'
+      default: false
+    opacity:
+      type: float
+      label: 'Opacity'
+      default: 1
+    wireframe:
+      type: boolean
+      label: 'Enable Wireframe'
+      default: false

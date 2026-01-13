@@ -1,0 +1,10 @@
+base:
+  version: VERSION
+  js:
+    dist/cad-render.js: { attributes: { type: 'module' } }
+  dependencies:
+    - core/drupal
+    - core/once
+  css:
+    theme:
+      css/cad_render.css: {}
