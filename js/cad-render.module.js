@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { PMREMGenerator } from 'three';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 
 (function(Drupal, once) {
   Drupal.behaviors.cadRender = {
@@ -45,7 +45,7 @@ import { PMREMGenerator } from 'three';
       renderer.setPixelRatio(window.devicePixelRatio); // sharpness
       container.appendChild(renderer.domElement);
 
-      const pmremGenerator = new PMREMGenerator(renderer);
+      const pmremGenerator = new THREE.PMREMGenerator(renderer);
       pmremGenerator.compileEquirectangularShader();
 
       const env = new RoomEnvironment();
@@ -66,6 +66,10 @@ import { PMREMGenerator } from 'three';
 
       // Load model.
       const loader = new GLTFLoader();
+      const dracoLoader = new DRACOLoader();
+      dracoLoader.setDecoderPath(new URL('../draco/', import.meta.url).href);
+      loader.setDRACOLoader(dracoLoader);
+
       let model;
       let pivot;
 
